@@ -1,0 +1,2 @@
+add_executable(mvft_tests test.cpp)
+target_link_libraries(mvft_tests PUBLIC magic_vtable)
