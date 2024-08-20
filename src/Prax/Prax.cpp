@@ -17,7 +17,6 @@
 #include <Prax/Module/ModuleManager.h>
 #include <Prax/Command/CommandManager.h>
 #include <Prax/Utils/System/ToastManager.h>
-#include <Prax/Scripting/ScriptManager.h>
 #include <windows.h>
 #include <cryptopp/files.h>
 
