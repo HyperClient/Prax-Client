@@ -37,7 +37,7 @@ HMODULE Prax::ModuleHandle;
 bool Prax::Initialized;
 bool Prax::ShouldUIRender = true;
 Preferences* Prax::Preferences = nullptr;
-std::string Prax::ClientName = "catgirl";
+std::string Prax::ClientName = "Prax";
 uint64_t Prax::InjectTime;
 
 
@@ -54,7 +54,7 @@ void Prax::Init() {
     FileSystem::Init();
 
     auto w = winrt::Windows::ApplicationModel::Core::CoreApplication::MainView().CoreWindow().Dispatcher().RunAsync(winrt::Windows::UI::Core::CoreDispatcherPriority::Normal, []() {
-        winrt::Windows::UI::ViewManagement::ApplicationView::GetForCurrentView().Title(L"Catgirl Client");
+        winrt::Windows::UI::ViewManagement::ApplicationView::GetForCurrentView().Title(L"Prax Client");
     });
 
     Logger::Write(xorstr_("Init"), xorstr_("Loading settings..."));
@@ -112,7 +112,7 @@ void Prax::Init() {
     ToastManager::Init();
 
 
-    Logger::Write(xorstr_("Init"), xorstr_("Initialized Catgirl!"));
+    Logger::Write(xorstr_("Init"), xorstr_("Initialized Prax!"));
     uint64_t endTime = Misc::GetCurrentMs();
     uint64_t timeTaken = endTime - startTime;
     Logger::Write(xorstr_("Init"), xorstr_("Initialization took ") + std::to_string(timeTaken) + xorstr_("ms"));

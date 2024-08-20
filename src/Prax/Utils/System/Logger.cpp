@@ -21,7 +21,7 @@ void Logger::Init() {
     // Allocate a new console for logging.
     AllocConsole();
     // Set da console title
-    SetConsoleTitle("Catgirl Console");
+    SetConsoleTitle("Prax Console");
     freopen_s((FILE**)stdout, "CONOUT$", "w", stdout);
 
     // Set the console to enable virtual terminal processing.

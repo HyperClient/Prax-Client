@@ -141,7 +141,7 @@ HWND D3D::GetHWND() {
 
     for (auto& [hwnd, title] : titles) {
         // Log the title
-        if (title.find("Minecraft") != std::string::npos && title.find("Catgirl") != std::string::npos) {
+        if (title.find("Minecraft") != std::string::npos && title.find("Prax") != std::string::npos) {
             Logger::Write("DirectX", "Found window, HWND: " + String::ToHex((uintptr_t) hwnd), Logger::Debug);
             cachedHwnd = hwnd;
             return hwnd;

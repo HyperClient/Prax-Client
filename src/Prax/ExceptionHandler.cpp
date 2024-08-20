@@ -35,7 +35,7 @@ LONG WINAPI TopLevelExceptionHandler(const PEXCEPTION_POINTERS pExceptionInfo)
     Logger::Write("ExceptionHandler", fullException, Logger::LogType::Error);
 
     auto res = MessageBoxA(nullptr, (exceptionCode + exceptionAddress + exceptionFlags + exceptionParams + exceptionContextRecord + "\n\n" + "Base offset (Copied to clipboard): " +
-                    Misc::GetModuleOfAddress(reinterpret_cast<uintptr_t>(pExceptionInfo->ExceptionRecord->ExceptionAddress))).c_str(), "Catgirl has crashed!", MB_RETRYCANCEL | MB_ICONERROR);
+                    Misc::GetModuleOfAddress(reinterpret_cast<uintptr_t>(pExceptionInfo->ExceptionRecord->ExceptionAddress))).c_str(), "Prax has crashed!", MB_RETRYCANCEL | MB_ICONERROR);
 
     if (res == IDRETRY) {
         return EXCEPTION_CONTINUE_EXECUTION; // Continue execution and attempt to recover
@@ -52,7 +52,7 @@ LONG WINAPI TopLevelExceptionHandler(const PEXCEPTION_POINTERS pExceptionInfo)
     const std::string timeStr = std::to_string(time.wYear) + "_" + std::to_string(time.wMonth) + "_" + std::to_string(time.wDay) + " " + std::to_string(time.wHour) + "_" + std::to_string(time.wMinute) + "_" + std::to_string(time.wSecond);
     ConfigManager::Save(timeStr);
 
-    MessageBoxA(nullptr, std::string("Catgirl has crashed! We have saved your config as " + timeStr + ".json").c_str(), "Catgirl has crashed!", MB_OK | MB_ICONERROR);
+    MessageBoxA(nullptr, std::string("Prax has crashed! We have saved your config as " + timeStr + ".json").c_str(), "Prax has crashed!", MB_OK | MB_ICONERROR);
 
 
 

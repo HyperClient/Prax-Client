@@ -18,7 +18,7 @@ struct IRCPrefs {
 
 struct ModulePrefs {
 public:
-    std::string StreamerName = "Catgirl";
+    std::string StreamerName = "Prax";
     std::vector<std::string> Friends = std::vector<std::string>();
 };
 
@@ -27,7 +27,7 @@ struct Preferences {
     IRCPrefs IRC;
     ModulePrefs Module;
     std::string DefaultConfig = ""; // The default config to load on startup. (Blank for none)
-    std::string ClientName = "catgirl";
+    std::string ClientName = "Prax";
     std::vector<std::string> AutoSnipeTargets = {};
 };
 
